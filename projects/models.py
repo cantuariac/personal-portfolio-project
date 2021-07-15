@@ -24,7 +24,8 @@ class Profile(models.Model):
     phone = models.CharField(max_length=20)
     roles = models.TextField()
     about = models.TextField()
-    picture = models.ImageField(upload_to='image/', blank=True, null=True)
+    # picture = models.ImageField(upload_to='image/', blank=True, null=True)
+    picture = models.FilePathField()
 
     def __str__(self):
         return self.name
